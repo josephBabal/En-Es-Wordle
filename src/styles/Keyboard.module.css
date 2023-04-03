@@ -1,0 +1,111 @@
+.boardContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 500px;
+}
+
+.row {
+  display: flex;
+  gap: 1px;
+}
+
+.topRow, .specialRow {
+  margin: 10px 0 0 0;
+}
+
+.topRow, 
+.middleRow,
+.bottomRow {
+  width: 500px;
+  display: flex;
+  justify-content: center;
+}
+
+.bottomRow .row:first-child {
+  margin: 0 0 0 1px;
+}
+
+.bottomRow .row:last-child {
+  margin: 0 1px 0 0;
+}
+
+.specialLight {
+  background: rgb(210, 210, 210);
+  color: black;
+
+}
+
+.specialDark {
+  color: white;
+  background: #818384;
+}
+
+.letter,
+.special {
+  display: inline-block;
+  border-radius: 6px;
+  padding: 15px 15px;
+  margin: 2px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+}
+
+.special {
+  font-size: 0.9rem;
+  padding: 10px;
+}
+
+.light {
+  color: black;
+}
+
+.dark {
+  color: white;
+}
+
+
+#green {
+  color: white;
+  background: rgb(23, 160, 23);;
+}
+
+#yellow {
+  color: white;
+  background: rgb(208, 155, 20);
+}
+
+/* dark and letter used */
+#darkGrey {
+  color: white;
+  background: rgb(54, 54, 54);
+  /* background: black; */
+}
+
+/* light and letter used */
+#lightGrey {
+  color: white;
+  background: rgb(120, 120, 120);
+}
+
+/* dark and letter not used */
+#darkTransparent {
+  color: white;
+  background: #818384;
+}
+
+/* light and letter not used */
+#lightTransparent {
+  color: black;
+  background: rgb(210, 210, 210);
+}
+
+@media(max-width: 576px) {
+  .boardContainer {
+    /* width: 300px; */
+  }
+}

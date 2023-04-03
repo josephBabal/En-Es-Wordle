@@ -1,0 +1,149 @@
+.navContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 65px 0 0 0;
+  position: relative;
+}
+
+.containerDark,
+.containerLight {
+  padding: 10px 10px;
+  width: 75px;
+  text-align: center;
+}
+
+.containerDark {
+  border: 1px solid rgb(120, 120, 120);
+}
+
+.containerLight {
+  border: 1px solid black;
+}
+
+.changeContainer {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+}
+
+.changeContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.displayLang {
+  display: flex;
+  gap: 5px;
+}
+
+
+.flag {
+  width: 27px;
+}
+
+.none {
+  display: none;
+}
+
+.drop {
+  margin: 10px 0 0 0;
+}
+
+.displayLang:hover {
+  color: rgb(180, 180, 180);
+}
+
+.dividerLight,
+.dividerDark {
+  height: 1px;
+  margin: 0 0 5px 0;
+} 
+
+.dividerLight {
+  background: black;
+}
+
+.dividerDark {
+  background: rgb(120, 120, 120);
+}
+
+
+.userButtonContainer {
+  display: flex;
+  align-items: center;
+  /* gap: 50px; */
+  font-size: 0.9rem;
+  position: absolute;
+  top: 30%;
+  right: 30%;
+}
+
+.helpButton {
+  position: relative;
+  /* margin: 0 40px 0 40px; */
+  background: transparent;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.changeTheme {
+  position: absolute;
+  top: 0%;
+  margin: 0 0 0 100px;
+  width: auto;
+}
+
+.displayTheme {
+  display: flex;
+  gap: 5px;
+}
+
+.themeIcon {
+  /* font-size: 23px; */
+}
+
+.settingButton {
+  position: relative;
+  font-size: 23px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.settingDark {
+  color: rgb(210, 210, 210)
+}
+
+.settingLight {
+  color: black;
+}
+
+
+@media(max-width: 1100px) {
+  .containerDark,
+  .containerLight {
+    left: 20%;
+  }
+
+  .userButtonContainer {
+    right: 25%;
+  }
+}
+
+@media(max-width: 706px) {
+  .containerDark,
+  .containerLight {
+    left: 10%;
+  }
+
+  .userButtonContainer {
+    right: 30%;
+  }
+  
+}

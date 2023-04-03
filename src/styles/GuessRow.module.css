@@ -1,0 +1,71 @@
+.guessRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
+
+
+.guessBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  transition: 250ms ease-in-out;
+  font-weight: bold;
+}
+
+.light {
+  border: 1px solid rgb(150, 150, 150);
+  color: black;
+}
+
+.dark {
+  border: 1px solid #585657; 
+}
+
+.submitError {
+  border: 1px solid red;
+  transition: 100ms ease-in-out;
+}
+
+#green {
+  background: rgb(23, 160, 23);
+  color: white;
+}
+
+#yellow {
+  background: rgb(208, 155, 20);
+  color: white;
+}
+
+#grey {
+  background: rgb(54, 54, 54);
+  color: white;
+}
+
+#lightgrey {
+  background: rgb(150, 150, 150);
+  color: white;
+}
+
+@keyframes shake {
+  0% { transform: translate(0, 0); }
+  10% { transform: translate(-10px, 0); }
+  20% { transform: translate(10px, 0); }
+  30% { transform: translate(-10px, 0); }
+  40% { transform: translate(10px, 0); }
+  50% { transform: translate(-10px, 0); }
+  60% { transform: translate(10px, 0); }
+  /* 70% { transform: translate(-10px, 0); }
+  80% { transform: translate(10px, 0); }
+  90% { transform: translate(-10px, 0); } */
+  100% { transform: translate(0, 0); }
+}
+
+.shakeRow {
+  animation: shake 550ms;
+}

@@ -1,0 +1,142 @@
+.cardContainer {
+  width: 400px;
+  /* height: 500px; */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 10px 0 20px 20px;
+  font-size: 15px;
+  border: 1px solid grey;
+  /* margin-left: 10px; */
+}
+
+.title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin: 0 0 5px 0;
+}
+
+.dark {
+  background: black;
+}
+
+.light {
+  background: white;
+}
+
+.closeIcon {
+  align-self: flex-end;
+  font-size: 25px;
+  margin: 0 20px 0 0;
+  cursor: pointer;
+}
+
+.selectText {
+  font-weight: bold;
+  margin: 0 0 5px 0;
+  font-size: 1.0rem;
+}
+
+.selectOptions {
+  display: flex;
+}
+
+
+.enSide,
+.spanSide {
+  width: 120px;
+  transition: 150ms ease-in-out;
+  text-align: center;
+  padding: 5px 0px;
+  cursor: pointer;
+  font-size: 1.0rem;
+}
+
+.enSideLight, 
+.spanSideLight {
+  border: 1px solid rgb(210, 210, 210);
+  background: rgb(247, 250, 250);
+}
+
+.enSideDark,
+.spanSideDark {
+  border: 1px solid rgb(80, 80, 80);
+}
+
+.enSide:hover,
+.spanSide:hover {
+  color: white;
+  background: rgb(180, 180, 180);
+}
+
+.selectedDark {
+  color: rgb(240, 240, 240);
+  background: rgb(65, 65, 80);
+}
+
+.selectedLight {
+  color: rgb(240, 240, 240);
+  background: rgb(150, 150, 150);
+}
+
+.playDark,
+.playLight {
+  align-self: center;
+  width: 100px;
+  padding: 10px 15px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: 150ms ease-in-out;
+  border: none;
+}
+
+.playLight {
+  color: white;
+  background: black;
+}
+
+.playLight:hover {
+  background: rgb(180, 180, 180);
+}
+
+.playDark {
+  color: white;
+  background: rgb(150, 150, 150);
+  border: none;
+}
+
+.playDark:hover {
+  color: rgb(240, 240, 240);
+  background: rgb(65, 65, 80);
+}
+
+@media(max-width: 430px) {
+  .cardContainer {
+    width: 375px;
+    font-size: 0.9rem;
+    top: 30%;
+    margin: 10px 0 0 0;
+  }
+
+  .title {
+    font-size: 1.0rem;
+  }
+
+  .selectText {
+    font-size: 0.9rem;
+  }
+
+  .enSide,
+  .spanSide {
+    width: 100px;
+    font-size: 0.9rem;
+  }
+  
+}

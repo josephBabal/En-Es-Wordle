@@ -1,0 +1,25 @@
+.instructionContent {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  /* width: 90%; */
+}
+
+.title {
+  font-weight: bold;
+  margin: 0 0 5px 0;
+  font-size: 1.0rem;
+}
+
+.colorTitle {
+  margin: 0 0 5px 0;
+}
+
+.list {
+  padding: 0 20px 0 0;
+  margin: 0 0 0 28px;
+}
+
+.list li {
+  margin: 0 0 3px 0;
+}

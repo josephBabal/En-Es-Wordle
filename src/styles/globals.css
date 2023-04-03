@@ -1,0 +1,35 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Open-sans', sans-serif;
+  /* background-color: black; */
+}
+
+.light {
+  color: black;
+  background: white;
+}
+
+.dark {
+  color: white;
+  background: black;
+}
+
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  /* font-size: 1.2rem; */
+}
+
+/* @media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+} */

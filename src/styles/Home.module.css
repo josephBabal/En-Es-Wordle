@@ -1,0 +1,102 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: auto;
+}
+
+
+#title {
+  margin: 20px 0 0 0;
+  text-align: center;
+  font-size: 30px;
+}
+
+#contentContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0 0 0;
+  gap: 5px;
+}
+
+.instructionContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 10px 0px 20px 20px;
+  z-index: 5;
+  border: 1px solid grey;
+}
+
+.instructionDark {
+  background: black;
+}
+
+.instructionLight {
+  background: white;
+}
+
+.closeIcon {
+  align-self: flex-end;
+  font-size: 25px;
+  margin: 0 20px 0 0;
+  cursor: pointer;
+}
+
+.closeDark,
+.closeLight {
+  align-self: center;
+  width: 100px;
+  padding: 10px 15px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: 150ms ease-in-out;
+  border: none;
+}
+
+.closeLight {
+  color: white;
+  background: black;
+}
+
+.closeLight:hover {
+  background: rgb(180, 180, 180);
+}
+
+.closeDark {
+  color: white;
+  background: rgb(150, 150, 150);
+  border: none;
+}
+
+.closeDark:hover {
+  color: rgb(240, 240, 240);
+  background: rgb(65, 65, 80);
+}
+
+/* #backdrop {
+  height: 100vh;
+  z-index: 1;
+  background: rgba(89, 89, 89, 0.9);
+} */
+
+@media(max-width: 430px) {
+  .homeContainer {
+    width: 500px;
+  }
+
+  #backdrop {
+    
+  }
+}
