@@ -4,8 +4,6 @@
 backend
 server.js
 writeData.js
-data.json
-spanishData.json
 
 # dependencies
 /node_modules
