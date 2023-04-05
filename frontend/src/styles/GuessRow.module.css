@@ -69,3 +69,11 @@
 .shakeRow {
   animation: shake 550ms;
 }
+
+@media(max-width: 430px) {
+  .guessBox {
+    width: 35px;
+    height: 35px;
+    font-size: 1.3rem;
+  }
+}
