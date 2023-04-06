@@ -31,6 +31,12 @@ body {
   }
 }
 
+@media(max-width: 400px) {
+  body {
+    width: 350px;
+  }
+}
+
 /* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
