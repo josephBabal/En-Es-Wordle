@@ -249,12 +249,14 @@ export default function Home() {
           }
         </div>
       }
-      <button onClick={() => {
+
+      {/* <button onClick={() => {
         localStorage.clear()
         window.location.reload()
       }}>
         here
-      </button>
+      </button> */}
+      
       <div id={styles.contentContainer}>
         {guessColumn.map((guess, idx) => {
           return ( 
