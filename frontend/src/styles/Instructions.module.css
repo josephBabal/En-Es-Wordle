@@ -27,5 +27,6 @@
 @media(max-width: 430px) {
   .instructionCard {
     width: 340px;
+    padding: 5px;
   }
 }

@@ -220,7 +220,10 @@ export default function Home() {
       }
       <h1 id={styles.title}> En Es Wordle </h1>
       <div id={styles.contentContainer}>
-        {/* {guessRow} */}
+        <button onClick={() => {
+          localStorage.clear()
+          window.location.reload()
+        }}> here</button>
         {guessColumn.map((guess, idx) => {
           return ( 
             <GuessRow 

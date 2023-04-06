@@ -73,11 +73,9 @@ export default function OpenCard({handleOpenCard}) {
         </div>
       </div>
 
-      <div>
-        {language !== "" && 
-          <Instructions />
-        }
-      </div>
+      {language !== "" && 
+        <Instructions />
+      }
       {language !== "" && 
         <button 
           className={
