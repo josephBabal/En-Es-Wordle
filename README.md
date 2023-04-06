@@ -9,26 +9,19 @@ This is a copy of the game wordle that I created from scratch. You can play this
 <h3> How to run project locally </h3>
 
 <h3> 1. Clone the repository </h3>
-<p> 
 ``` 
 git clone https://github.com/josephBabal/En-Es-Wordle.git
 ```
-</p>
 
 <h3> 2. Install the dependencies </h3>
-
-<p>
 ```
 cd frontend
 npm install
 ```
-</p>
 
 
 <h3> 3. Run the project </h3>
-<p>
 ```
 cd frontend
 npm run dev
 ```
-</p>
