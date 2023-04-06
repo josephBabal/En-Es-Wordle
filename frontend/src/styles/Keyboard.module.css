@@ -116,9 +116,13 @@
     width: 100%;
   }
 
+  .row {
+    gap: 0.5px;
+  }
+
   .letter,
   .special {
-    padding: 15px 14px;
+    padding: 23px 14px;
     margin: 2px;
     font-size: 0.9rem;
   }
