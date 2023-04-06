@@ -1,6 +1,6 @@
 import styles from '../styles/GuessRow.module.css'
 import { useAppStore } from '../stores/appStore';
-export default function GuessRow({ guess, guessNumber, guessIdx }) {
+export default function GuessRow({ guess, guessNumber, guessIdx, lengthError }) {
   const { wordAnswer, theme, submitError} = useAppStore()
   const wordLength = 5;
   const guessBoxes = [];
@@ -29,6 +29,9 @@ export default function GuessRow({ guess, guessNumber, guessIdx }) {
           `${styles.submitError} 
           ${styles.shakeRow}` : ""
           } 
+          ${lengthError && guessNumber === guessIdx ? 
+            styles.shakeRow : ''
+          }
           ${theme == "dark" ? 
             styles.dark : styles.light
           }

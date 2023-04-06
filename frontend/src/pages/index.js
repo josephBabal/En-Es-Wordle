@@ -42,7 +42,7 @@ export default function Home() {
   const [curGuess, setCurGuess] = useState('');
   const [guessNumber, setGuessNumber] = useState(0)
   const [oldGuesses, setOldGuesses] = useState(new Array(6).fill(""));
-
+  const [lengthError, setLengthError] = useState(false)
 
   const removeAccents = (str) => {
     return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
@@ -86,6 +86,18 @@ export default function Home() {
     setWordAnswer(newWord());
   }, [language])
 
+  useEffect(() => {
+    setTimeout(() => {
+      setLengthError(false)
+    }, 1300)
+  }, [lengthError])
+
+  useEffect(() => {
+    setTimeout(() => {
+      setSubmitError(false)
+    }, 6000)
+  }, [submitError])
+
   const updateGuess = (event) => {
     setCurGuess(prev => prev + event.target.value) 
   }
@@ -93,7 +105,10 @@ export default function Home() {
 
   const submitGuess = (event) => {
     {event ? event.preventDefault() : ''}
-    if (curGuess.length !== 5) return
+    if (curGuess.length !== 5) {
+      setLengthError(true)
+      return
+    } 
     if (isSolved || guessNumber > 5) return
     // does not continue if guess has < 5 letters
 
@@ -219,11 +234,25 @@ export default function Home() {
           : <></>
       }
       <h1 id={styles.title}> En Es Wordle </h1>
+      {lengthError && 
+        <div 
+          className={`
+            ${styles.lengthText} 
+            ${theme == "dark" ? styles.errorTextDark : styles.errorTextLight}
+            ${lengthError ? styles.lengthErrorText : ''}
+          `}> 
+          {language == "en" ? 
+            <p> Not 5 letters </p> : <p> No 5 letra </p>
+          }
+        </div>
+      }
+      <button onClick={() => {
+        localStorage.clear()
+        window.location.reload()
+      }}>
+        here
+      </button>
       <div id={styles.contentContainer}>
-        <button onClick={() => {
-          localStorage.clear()
-          window.location.reload()
-        }}> here</button>
         {guessColumn.map((guess, idx) => {
           return ( 
             <GuessRow 
@@ -235,6 +264,7 @@ export default function Home() {
               key={idx} 
               guessNumber={guessNumber}
               guessIdx={idx}
+              lengthError={lengthError}
             /> 
           )
         })}
