@@ -45,7 +45,7 @@ export default function Home() {
   const [lengthError, setLengthError] = useState(false)
 
   const handleLengthError = () => {
-    setLengthError(true)
+    if (curGuess.length < 5) setLengthError(true)
   }
   const removeAccents = (str) => {
     return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
