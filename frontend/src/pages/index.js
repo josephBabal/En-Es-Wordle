@@ -245,7 +245,7 @@ export default function Home() {
             ${lengthError ? styles.lengthErrorText : ''}
           `}> 
           {language == "en" ? 
-            <p> Not 5 letters </p> : <p> No 5 letra </p>
+            <p> Not 5 letters </p> : <p> No son 5 letras </p>
           }
         </div>
       }
@@ -256,7 +256,7 @@ export default function Home() {
       }}>
         here
       </button> */}
-      
+
       <div id={styles.contentContainer}>
         {guessColumn.map((guess, idx) => {
           return ( 
