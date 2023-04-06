@@ -78,7 +78,7 @@ export default function Keyboard({
                 styles.darkTransparent :
                 styles.lightTransparent }
             > 
-              <p style={{ userSelect: "none" }}> {letter}  </p>
+              <p style={className.character}> {letter}  </p>
             </button>
         )})}
       </div>

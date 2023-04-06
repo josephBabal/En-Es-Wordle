@@ -53,6 +53,14 @@
   cursor: pointer;
   font-weight: bold;
   border: none;
+
+}
+
+.character {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; 
+  user-select: none;
 }
 
 .special {
