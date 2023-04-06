@@ -105,7 +105,7 @@ export default function Home() {
 
   const submitGuess = (event) => {
     {event ? event.preventDefault() : ''}
-    if (curGuess.length !== 5) {
+    if (curGuess.length !== 5  && length == false) {
       setLengthError(true)
       return
     } 
