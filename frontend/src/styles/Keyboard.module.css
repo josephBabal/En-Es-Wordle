@@ -19,7 +19,6 @@
 .topRow, 
 .middleRow,
 .bottomRow {
-  width: 500px;
   display: flex;
   justify-content: center;
 }
@@ -63,6 +62,10 @@
 }
 
 .special {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; 
+  user-select: none;
   font-size: 0.9rem;
   padding: 10px;
 }
@@ -122,7 +125,7 @@
 
   .letter,
   .special {
-    padding: 23px 12px;
+    padding: 23px 13px;
     margin: 2px;
     font-size: 0.9rem;
   }
