@@ -124,14 +124,14 @@
   }
 
   .letter {
-    padding: 23px 15px;
+    padding: 23px 13px;
     margin: 2px;
     font-size: 0.9rem;
   }
 
   .special {
     font-size: 0.7rem;
-    padding: 10px 14px;
+    padding: 10px 12px;
   }
 }
 
