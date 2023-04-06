@@ -119,7 +119,7 @@
 
 @media(max-width: 430px) {
   .cardContainer {
-    width: 375px;
+    width: 340px;
     font-size: 0.9rem;
     top: 30%;
     margin: 10px 0 0 0;

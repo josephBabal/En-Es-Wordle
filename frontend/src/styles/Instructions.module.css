@@ -23,3 +23,9 @@
 .list li {
   margin: 0 0 3px 0;
 }
+
+@media(max-width: 430px) {
+  .instructionCard {
+    width: 340px;
+  }
+}

@@ -4,7 +4,7 @@ import { useAppStore } from '../stores/appStore'
 export default function Instructions() {
   const {language, handleInstruction } = useAppStore()
   return (
-    <div>
+    <div className={styles.instructionCard}>
       {language == "en" ?
         <div className={styles.instructionContent}>
           <div className={styles.title}> How to play </div>
