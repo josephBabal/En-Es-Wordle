@@ -1,7 +1,8 @@
+<div style="font-size: 18px;">
 ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-
+</div>
 
 <h4 align="center">  Wordle for English and Español
 This is a copy of the game wordle that I created from scratch. You can play this game in English and in Spanish.
