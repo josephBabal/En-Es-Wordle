@@ -44,6 +44,9 @@ export default function Home() {
   const [oldGuesses, setOldGuesses] = useState(new Array(6).fill(""));
   const [lengthError, setLengthError] = useState(false)
 
+  const handleLengthError = () => {
+    setLengthError(true)
+  }
   const removeAccents = (str) => {
     return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
   }
@@ -105,10 +108,8 @@ export default function Home() {
 
   const submitGuess = (event) => {
     {event ? event.preventDefault() : ''}
-    if (curGuess.length !== 5  && length == false) {
-      setLengthError(true)
-      return
-    } 
+    if (curGuess.length !== 5) return
+
     if (isSolved || guessNumber > 5) return
     // does not continue if guess has < 5 letters
 
@@ -165,7 +166,9 @@ export default function Home() {
     
     if (event.key === "Enter" && guessNumber <= 5) {
       // Run a function if Enter is pressed
+      if (curGuess.length < 5) setLengthError(true)
       submitGuess();
+
     } else if (event.key === "Backspace" && !isSolved) {
       // Run a different function if Delete is pressed
       handleDelete();
@@ -276,6 +279,7 @@ export default function Home() {
             handleDelete={handleDelete}
             oldGuesses={oldGuesses}
             handleKeyDown={handleKeyDown}
+            handleLengthError={handleLengthError}
           />
         {/* } */}
       </div>

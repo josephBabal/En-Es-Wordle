@@ -8,6 +8,7 @@ export default function Keyboard({
   handleDelete, 
   oldGuesses, 
   handleKeyDown, 
+  handleLengthError
 }) {
   const { wordAnswer, language, theme, overlay } = useAppStore()
   const topRow = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P']
@@ -102,7 +103,10 @@ export default function Keyboard({
             styles.specialDark : styles.specialLight}
           `}  
           value={'Enter'} 
-          onClick={submitGuess} 
+          onClick={() => {
+            submitGuess()
+            handleLengthError()
+          }} 
           key={'Enter'} 
         > 
           {language == "en" ? <p> Enter </p> : <p> Enivar </p>}
