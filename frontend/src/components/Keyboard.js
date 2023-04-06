@@ -78,7 +78,7 @@ export default function Keyboard({
                 styles.darkTransparent :
                 styles.lightTransparent }
             > 
-              <p style={className.character}> {letter}  </p>
+              <p styles={className.character}> {letter}  </p>
             </button>
         )})}
       </div>
