@@ -5,7 +5,7 @@ import ToggleLang from './ToggleLang';
 import ToggleTheme from './ToggleTheme';
 import { useAppStore } from '../stores/appStore';
 
-export default function Navbar({resetGame}) {
+export default function Navbar({resetGame, themeRef, langRef}) {
   const { 
     theme, 
     language, 
@@ -28,6 +28,7 @@ export default function Navbar({resetGame}) {
           language={language} 
           handleLanguageChange={handleLanguageChange}
           resetGame={resetGame}
+          langRef={langRef}
         />
       </div>
 
@@ -51,6 +52,7 @@ export default function Navbar({resetGame}) {
             theme={theme} 
             language={language} 
             handleThemeChange={handleThemeChange}
+            themeRef={themeRef}
           />
         </div>
         {/* <button className={`${styles.settingButton} ${theme == "dark" ? styles.settingDark : styles.settingLight}`} > <IoSettingsSharp /> </button> */}

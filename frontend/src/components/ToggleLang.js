@@ -1,18 +1,18 @@
 import { useState } from 'react'
 import styles from '../styles/Navbar.module.css'
+import { useAppStore } from '../stores/appStore'
 
 
 export default function ToggleLang({
   theme, 
   language, 
   handleLanguageChange,
-  resetGame
+  resetGame,
+  langRef
 }) {
 
-  const [isOpen, setIsOpen] = useState(false)
-  const handleOpen = () => {
-    setIsOpen(prev => !prev)
-  }
+  const { isOpenLang, handleOpenLang} = useAppStore()
+
   const renderEsFlag =
     <div className={styles.displayLang}>
       <img className={styles.flag} src='./flags-img/es-flag.jpg' />
@@ -28,13 +28,13 @@ export default function ToggleLang({
     
   
   return (
-    <div className={styles.changeContent} onClick={handleOpen}>
+    <div className={styles.changeContent} onClick={handleOpenLang} ref={langRef}>
       {language == "es" ? renderEsFlag : renderEnFlag}
       <div
         onClick={() => { 
           resetGame()
           handleLanguageChange()
-        }} className={`${styles.changeContent} ${isOpen ? styles.drop : styles.none}`}>
+        }} className={`${styles.changeContent} ${isOpenLang ? styles.drop : styles.none}`}>
         <span className={theme == "dark" ? styles.dividerDark : styles.dividerLight}></span>
         {language == "es" ? renderEnFlag : renderEsFlag}
       </div>

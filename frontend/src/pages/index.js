@@ -1,6 +1,6 @@
 
 import styles from '../styles/Home.module.css'
-import {useState, useEffect, useContext } from 'react'
+import {useState, useEffect, useRef } from 'react'
 // import axios from 'axios'
 import enWordData from '../data/data.json'
 import { spanWordData } from '../data/spanishData'
@@ -28,8 +28,15 @@ export default function Home() {
     setSubmitError,
     isInstructionOpen,
     handleInstruction,
-    setOverlay
+    setOverlay,
+    isOpenLang,
+    setOpenLang,
+    isOpenTheme,
+    setOpenTheme
   } = useAppStore()
+
+  const langRef = useRef(null)
+  const themeRef = useRef(null)
 
   const [isOpenCard, setIsOpenCard] = useState(false)
   const handleOpenCard = () => {
@@ -100,6 +107,25 @@ export default function Home() {
       setSubmitError(false)
     }, 6000)
   }, [submitError])
+
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (isOpenLang && langRef.current && !langRef.current.contains(event.target)) {
+        setOpenLang(false)
+      }
+      if (isOpenTheme && themeRef.current && !themeRef.current.contains(event.target)) {
+        setOpenTheme(false)
+      }
+      
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+  }, [isOpenLang, isOpenTheme])
 
   const updateGuess = (event) => {
     setCurGuess(prev => prev + event.target.value) 
@@ -186,7 +212,11 @@ export default function Home() {
   
   return (
     <div className={styles.homeContainer}>   
-      <Navbar resetGame={resetGame} />
+      <Navbar 
+        resetGame={resetGame} 
+        themeRef={themeRef} 
+        langRef={langRef} 
+      />
       
       {isOpenCard && 
         <div className={styles.overlay}>

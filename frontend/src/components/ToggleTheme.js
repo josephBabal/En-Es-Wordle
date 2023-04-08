@@ -1,12 +1,12 @@
-import { useState } from 'react'
+import { useRef } from 'react'
 import styles from '../styles/Navbar.module.css'
 import { MdOutlineLightMode } from "react-icons/md";
 import { MdOutlineDarkMode } from "react-icons/md";
-export default function ToggleTheme({theme, language, handleThemeChange}) {
-  const [isOpen, setIsOpen] = useState(false)
-  const handleOpen = () => {
-    setIsOpen(prev => !prev)
-  }
+import { useAppStore } from '../stores/appStore'
+
+export default function ToggleTheme({theme, language, handleThemeChange, themeRef}) {
+ 
+  const { isOpenTheme, handleOpenTheme} = useAppStore()
 
   const renderEnDark = 
     <div className={styles.displayTheme}>
@@ -33,9 +33,9 @@ export default function ToggleTheme({theme, language, handleThemeChange}) {
       </div>
 
   return (
-    <div className={styles.changeContent} onClick={handleOpen}>
+    <div className={styles.changeContent} onClick={handleOpenTheme} ref={themeRef}>
       {language == "es" ? theme == "dark" ? renderEsDark : renderEsLight : theme == "dark" ? renderEnDark : renderEnLight}
-      <div onClick={handleThemeChange} className={`${styles.changeContent} ${isOpen ? styles.drop : styles.none}`}>
+      <div onClick={handleThemeChange} className={`${styles.changeContent} ${isOpenTheme ? styles.drop : styles.none}`}>
         <span className={theme == "dark" ? styles.dividerDark : styles.dividerLight}></span>
         {language == "es" ? theme == "dark" ? renderEsLight : renderEsDark : theme == "dark" ?  renderEnLight : renderEnDark}
       </div>

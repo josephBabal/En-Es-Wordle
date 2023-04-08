@@ -26,5 +26,11 @@ export const useAppStore = create((set,get) => ({
   isInstructionOpen: false,
   handleInstruction: () => set({isInstructionOpen: !get().isInstructionOpen}),
   overlay: true,
-  setOverlay: (value) => set({overlay: value})
+  setOverlay: (value) => set({overlay: value}),
+  isOpenLang: false,
+  setOpenLang: (value) => set({isOpenLang: value}),
+  handleOpenLang: () => set({isOpenLang: !get().isOpenLang}),
+  isOpenTheme: false,
+  setOpenTheme: (value) => set({isOpenTheme: value}),
+  handleOpenTheme: () =>  set({isOpenTheme: !get().isOpenTheme})
 }))
