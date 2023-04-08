@@ -9,7 +9,7 @@
 
 .row {
   display: flex;
-  gap: 1px;
+  gap: 2px;
 }
 
 .topRow, .specialRow {
@@ -121,7 +121,7 @@
 
 @media(max-width: 430px) {
   .letter {
-    width: 37.2px;
+    width: 36.2px;
     margin: 1.5px;
     font-size: 0.9rem;
   }
@@ -134,7 +134,7 @@
 
 @media(max-width: 395px) {
   .letter {
-    width: 35.3px;
+    width: 34.3px;
   }
 
   .special {
@@ -144,7 +144,7 @@
 
 @media(max-width: 385px) {
   .letter {
-    width: 33.5px;
+    width: 32.5px;
   }
 
   .special {
@@ -154,7 +154,7 @@
 
 @media(max-width: 370px) {
   .letter {
-    width: 32.3px;
+    width: 31.3px;
   }
   
   .special {
@@ -164,7 +164,7 @@
 
 @media(max-width: 300px) {
   .letter {
-    width: 27px;
+    width: 26px;
     font-size: 0.6rem;
   }
   
