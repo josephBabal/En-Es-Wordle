@@ -120,27 +120,8 @@
 } */
 
 @media(max-width: 430px) {
-  .homeContainer {
-    width: 325px;
-    margin: 0 auto;
-  }
-
   #title {
     font-size: 23px;
     margin: 40px 0 0 0;
   }
-
-  #backdrop {
-    
-  }
 }
-
-/* @media(max-width: 400px) {
-  .homeContainer {
-    width: 300px;
-  }
-
-  #backdrop {
-    
-  }
-} */

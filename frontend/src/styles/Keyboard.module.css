@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   gap: 5px;
-  width: 500px;
+  width: 100%;
 }
 
 .row {
@@ -46,12 +46,17 @@
 .special {
   display: inline-block;
   border-radius: 6px;
-  padding: 15px 15px;
   margin: 2px;
   font-size: 1.1rem;
   cursor: pointer;
   font-weight: bold;
   border: none;
+  width: 45px;
+  height: 45px;
+}
+
+.special {
+  width: 65px;
 }
 
 .character {
@@ -115,24 +120,56 @@
 }
 
 @media(max-width: 430px) {
-  .boardContainer {
-    width: 350px;
-  }
-
-  .row {
-    gap: 0.5px;
-  }
-
   .letter {
-    padding: 23px 13px;
-    margin: 2px;
+    width: 37.2px;
+    margin: 1.5px;
     font-size: 0.9rem;
   }
 
   .special {
+    width: 58px;
     font-size: 0.7rem;
-    padding: 10px 12px;
   }
 }
 
-/* @media(max-width:) */
+@media(max-width: 395px) {
+  .letter {
+    width: 35.3px;
+  }
+
+  .special {
+    width: 55px;
+  }
+}
+
+@media(max-width: 385px) {
+  .letter {
+    width: 33.5px;
+  }
+
+  .special {
+    width: 53px;
+  }
+}
+
+@media(max-width: 370px) {
+  .letter {
+    width: 32.3px;
+  }
+  
+  .special {
+    width: 50px;
+  }
+}
+
+@media(max-width: 300px) {
+  .letter {
+    width: 27px;
+    font-size: 0.6rem;
+  }
+  
+  .special {
+    width: 48px;
+    font-size: 0.5rem;
+  }
+}
